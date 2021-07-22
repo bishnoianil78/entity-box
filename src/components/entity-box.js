@@ -11,6 +11,11 @@ class EntityBox extends Component {
         return classes;
     }
     
+    // if count is a large number, replace it with following
+    getCount() {
+        return this.props.entity.count > 1000 ? `999+` : this.props.entity.count;
+    }
+
     render() {
         return(
             <div className="entity-box"> 
@@ -21,7 +26,7 @@ class EntityBox extends Component {
                     <div className="circle-filled"></div>
                     <div className="circle"></div>
                 </div>
-                <div className="count">{this.props.entity.count}</div>
+                <div className="count">{this.getCount()}</div>
             </div>
         )
     }

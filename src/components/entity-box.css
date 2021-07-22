@@ -77,7 +77,9 @@
 .entity-box .count {
     padding: 6px 10px;
     background-color: var(--countBgColor);
-    width: 20px;
+    max-width: 60px;
     color: var(--countTextColor);
     border-radius: 15px;
+    text-align: center;
+    font-weight: 600;
 }

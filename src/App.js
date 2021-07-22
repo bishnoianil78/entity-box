@@ -5,25 +5,31 @@ import EntityBox from './components/entity-box';
 class App extends Component {
   state = {
     entity: {
-      name: 'Long name for Type',
+      name: 'Long name for EntityName',
       type: 'AppTier',
-      count: 20,
+      count: 180,
+      connected: true,
+    },
+    entity1: {
+      name: 'Extra extra extra extra extra long name for EntityName field',
+      type: 'AppTier',
+      count: 10222,
       connected: true,
     }
   }
   render() {
     return (
-      <div className="App">
+      <div className="App example-container">
         <div className="example">
-          <h2>Small container width</h2>
+          <h2>Example: Small container width</h2>
           <EntityBox entity={this.state.entity} />
         </div>
         <div className="example1">
-          <h2>Large container width</h2>
-          <EntityBox entity={this.state.entity} />
+          <h2>Example: Large container width and large count</h2>
+          <EntityBox entity={this.state.entity1} />
         </div>
         <div className="example2">
-          <h2>100% container width</h2>
+          <h2>Example: 100% container width</h2>
           <EntityBox entity={this.state.entity} />
         </div>
       </div>
