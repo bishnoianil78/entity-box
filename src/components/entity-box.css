@@ -1,0 +1,83 @@
+.entity-box  {
+    --borderColor: #CCCCCC;
+    --typeBgColor: #f1f8fe;
+    --typeTextColor :#67a8ed;
+    --nameTextColor: #666666;
+    --colorDisconnected: #FF0000;
+    --colorConnected: #008000;
+    --countTextColor: #ffffff;
+    --countBgColor: #bec2c5;
+}
+
+.entity-box {
+    font-size: 15px;
+    display: flex;
+    padding: 10px;
+    height: 30px;
+    border: 2px solid var(--borderColor);
+    border-radius: 5px;
+}
+.entity-box {
+    justify-content: space-between;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.entity-box .type {
+    background-color: var(--typeBgColor);
+    color: var(--typeTextColor);
+    padding: 5px 10px;
+    min-width: 50px;
+    flex-grow: 1;
+    border-radius: 5px;
+}
+
+.entity-box .name {
+    text-align: left;
+    padding: 7px 10px;
+    min-width: 50px;
+    flex-grow: 2;
+    color: var(--nameTextColor);
+    font-weight: 700;
+}
+
+.entity-box .status { 
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0 5px;
+    align-items: center;
+}
+
+.entity-box .status .circle {
+    border-radius: 50%;
+    border: 2px solid var(--borderColor);
+    height: 15px;
+    width: 15px;
+}
+
+.entity-box .status .circle-filled { 
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+.entity-box .status.disconnected .circle-filled { 
+    background-color: var(--colorDisconnected);
+}
+
+.entity-box .status.connected .circle-filled { 
+    background-color: var(--colorConnected);
+}
+
+.entity-box .count {
+    padding: 6px 10px;
+    background-color: var(--countBgColor);
+    width: 20px;
+    color: var(--countTextColor);
+    border-radius: 15px;
+}

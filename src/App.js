@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import { Component } from 'react';
 import './App.css';
+import EntityBox from './components/entity-box';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    entity: {
+      name: 'Long name for Type',
+      type: 'AppTier',
+      count: 20,
+      connected: true,
+    }
+  }
+  render() {
+    return (
+      <div className="App">
+        <div className="example">
+          <h2>Small container width</h2>
+          <EntityBox entity={this.state.entity} />
+        </div>
+        <div className="example1">
+          <h2>Large container width</h2>
+          <EntityBox entity={this.state.entity} />
+        </div>
+        <div className="example2">
+          <h2>100% container width</h2>
+          <EntityBox entity={this.state.entity} />
+        </div>
+      </div>
+    );
+  }
+
 }
 
 export default App;
